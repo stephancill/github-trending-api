@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from sanic import Sanic
 from sanic.response import json
+import sys
 
 def get_trending(language=""):
 	html = requests.get(f'https://github.com/trending/{language}').text
