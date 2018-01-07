@@ -29,7 +29,7 @@ def get_trending(language=""):
 
 app = Sanic()
 
-@app.route("/")
+@app.route("/trending")
 async def trending(request):
 	try:
 		repos = get_trending()
@@ -43,6 +43,6 @@ if __name__ == "__main__":
         port = int(sys.argv[2])
     except Exception:
         host = "0.0.0.0"
-        port = 8080
+        port = 8000
 
     app.run(host=host, port=port)
